@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <title>Survey Form</title>
+    <link rel="stylesheet" href="css/survey.css" />
 </head>
 <body>
     <h1>Survey</h1>
-    <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+    <form class="survey-form" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
         <fieldset>
             <legend>Your Information</legend>
             <div>
@@ -43,7 +44,12 @@
                 <label for="iguana">Iguana</label>
             </div>
         </fieldset>
-        <input type="submit" />
+        <input type="submit" id="submit-btn" />
     </form>
+
+
+{% comment %} Always include a name with every input {% endcomment %}
+{% comment %} Forms must have an action and a method to submit {% endcomment %}
+{% comment %} If you add an input with the type of "file", you need to add the enctype attribute to the form start tag and set it to "multipart/form-data". This will ensure that the server and browser will be able to handle the file transfers. {% endcomment %}
 </body>
 </html>
