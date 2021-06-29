@@ -51,3 +51,7 @@ input[type="submit"] {
   font-size: 20px;
   padding: 12px;
 }
+
+div:hover {
+    color: blue;
+}
